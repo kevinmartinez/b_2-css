@@ -1,0 +1,50 @@
+/* css zen gardens body id */
+#css-zen-garden {
+  background-color: lightblue;
+}
+
+/* intro section */
+.intro {
+  background: green;
+  padding: 25px;
+}
+
+.summary {
+  background-color: purple;
+}
+
+.preamble {
+  background-color: red;
+}
+
+/* main div */
+.main {
+  background: lightgreen;
+  padding: 25px;
+}
+
+.explanation {
+  background-color: yellow;
+}
+
+.participation {
+  background: blue;
+}
+
+.benefits {
+  background: yellow;
+}
+
+.requirements {
+  background: blue;
+}
+
+footer {
+  background: firebrick;
+}
+
+/* sidebar */
+.sidebar {
+  background: darkgreen;
+  padding: 25px;
+}
