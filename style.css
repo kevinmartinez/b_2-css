@@ -1,50 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300|Quattrocento:400,700);
+
 /* css zen gardens body id */
 #css-zen-garden {
   background-color: lightblue;
+  font-family: 'Quattrocento', serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Oswald', sans-serif;
+  color: #2C3E50;
+}
+
+h1 {
+  font-size: 75px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 45px;
+}
+
+h4 {
+  font-size: 30px;
 }
 
 /* intro section */
+/* Background pattern from subtlepatterns.com */
 .intro {
-  background: green;
+  background: url('wild_flowers.png');
   padding: 25px;
 }
 
+.intro header {
+  background: rgba(52, 152, 219,1.0);
+  padding: 10px;
+  border: 2px solid green;
+}
+
 .summary {
-  background-color: purple;
+  background: #2ecc71;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #000;
 }
 
 .preamble {
-  background-color: red;
+  background: #27ae60;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #000;
 }
 
 /* main div */
 .main {
-  background: lightgreen;
+  background: #ecf0f1;
   padding: 25px;
 }
 
 .explanation {
-  background-color: yellow;
+  background: #34495e;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #000;
 }
 
 .participation {
-  background: blue;
+  background: #2980b9;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #000;
 }
 
 .benefits {
-  background: yellow;
+  background: #34495e;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #000;
 }
 
 .requirements {
-  background: blue;
+  background: #2980b9;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #000;
 }
 
 footer {
   background: firebrick;
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #000;
 }
 
 /* sidebar */
 .sidebar {
-  background: darkgreen;
+  background: #e67e22;
   padding: 25px;
+}
+
+.wrapper {
+  max-width: 400px;
+}
+
+.design-selection {
+  background: lightblue;
+  padding: 10px;
+  border: 2px solid #000;
+}
+
+.design-archives {
+  background: lightblue;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #000;
+}
+
+.zen-resources {
+  background: lightblue;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #000;
 }
