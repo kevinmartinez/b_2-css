@@ -1,4 +1,19 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300|Quattrocento:400,700);
+
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  -webkit-flex-direction: column;
+}
+
+
+html, body {
+  font-size: 16px;
+  height: 100%;
+}
 
 /* css zen gardens body id */
 #css-zen-garden {
@@ -13,21 +28,6 @@ h3 {
   color: #2C3E50;
 }
 
-h1 {
-  font-size: 75px;
-}
-
-h2 {
-  font-size: 60px;
-}
-
-h3 {
-  font-size: 45px;
-}
-
-h4 {
-  font-size: 30px;
-}
 
 /* intro section */
 /* Background pattern from subtlepatterns.com */
@@ -37,7 +37,8 @@ h4 {
 }
 
 .intro header {
-  background: rgba(52, 152, 219,1.0);
+  background: url('zen-background.png') no-repeat;
+  background-size: cover;
   padding: 10px;
   border: 2px solid green;
 }
@@ -56,45 +57,62 @@ h4 {
   border: 2px solid #000;
 }
 
-/* main div */
+
+
+
+
+
+/* main div FLEX CONTAINER */
 .main {
   background: #ecf0f1;
   padding: 25px;
+  display: flex;
+  flex: 1;
+  -webkit-flex-wrap: wrap;
 }
 
 .explanation {
-  background: #34495e;
-  margin-top: 10px;
+  -webkit-flex: 1;
+  background: yellow;
   padding: 10px;
   border: 2px solid #000;
 }
-
+.explanation:hover {
+  -webkit-flex: 3;
+  transition: 2s;
+}
 .participation {
-  background: #2980b9;
-  margin-top: 10px;
+
+  -webkit-flex: 1;
+  background: blue;
   padding: 10px;
   border: 2px solid #000;
 }
 
 .benefits {
-  background: #34495e;
-  margin-top: 10px;
+
+  -webkit-flex: 1;
+  background: green;
   padding: 10px;
   border: 2px solid #000;
 }
 
 .requirements {
-  background: #2980b9;
-  margin-top: 10px;
+
+  -webkit-flex: 1;
+  height: 100%;
+  background: purple;
   padding: 10px;
   border: 2px solid #000;
 }
 
 footer {
+  flex-direction: row;
+  -webkit-flex: 1;
   background: firebrick;
-  margin-top: 10px;
   padding: 10px;
   border: 2px solid #000;
+  margin-left: auto;
 }
 
 /* sidebar */
@@ -125,4 +143,29 @@ footer {
   padding: 10px;
   margin-top: 10px;
   border: 2px solid #000;
+}
+
+
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 75px;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  h3 {
+    font-size: 45px;
+  }
+
+  h4 {
+    font-size: 30px;
+  }
+
+  .main {
+    -webkit-flex-direction: row;
+  }
+
 }
