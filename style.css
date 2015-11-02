@@ -5,11 +5,6 @@
   box-sizing: border-box;
 }
 
-.main {
-  -webkit-flex-direction: column;
-}
-
-
 html, body {
   font-size: 16px;
   height: 100%;
@@ -37,24 +32,62 @@ h3 {
 }
 
 .intro header {
-  background: url('zen-background.png') no-repeat;
+  background: url('zen-background.png') no-repeat center center fixed;
   background-size: cover;
   padding: 10px;
   border: 2px solid green;
 }
 
+.intro h1 {
+  color: #1E824C;
+  text-align: center;
+  margin-top: 240px;
+}
+
+.intro h2 {
+  margin-top: 100px;
+  margin-left: 200px;
+  color: #1E824C;
+}
+
+.intro h1 {
+  transition: margin-left 2s, color 0.8s;
+}
+
+.intro h1:hover {
+  margin-left: 300px;
+  color: yellow;
+}
+
 .summary {
-  background: #2ecc71;
+  background: #75cee1;
   margin-top: 10px;
   padding: 10px;
   border: 2px solid #000;
 }
 
+.summary p {
+  font-size: 1.25em;
+}
+
+.summary p::first-letter {
+  color: red;
+  font-size: 2em;
+}
+
 .preamble {
-  background: #27ae60;
+  background: #75cee1;
   margin-top: 10px;
   padding: 10px;
   border: 2px solid #000;
+}
+.preamble h3 {
+  box-shadow: 0 0 0 10px black;
+  width: 300px;
+  padding: 10px 10px 50px 10px;
+  transform: rotate(-8deg);
+  text-align: center;
+  margin: 0 auto;
 }
 
 
@@ -66,54 +99,43 @@ h3 {
 .main {
   background: #ecf0f1;
   padding: 25px;
-  display: flex;
-  flex: 1;
-  -webkit-flex-wrap: wrap;
-}
+  min-height: 100vh;
 
-.explanation {
-  -webkit-flex: 1;
-  background: yellow;
-  padding: 10px;
-  border: 2px solid #000;
 }
-.explanation:hover {
-  -webkit-flex: 3;
-  transition: 2s;
-}
-.participation {
+  .explanation {
 
-  -webkit-flex: 1;
-  background: blue;
-  padding: 10px;
-  border: 2px solid #000;
-}
+    background: yellow;
+    padding: 10px;
+    border: 2px solid #000;
+  }
+    .explanation:hover {
 
-.benefits {
+      transition: 2s;
+    }
+  .participation {
 
-  -webkit-flex: 1;
-  background: green;
-  padding: 10px;
-  border: 2px solid #000;
-}
+    background: blue;
+    padding: 10px;
+    border: 2px solid #000;
+  }
+  .benefits {
 
-.requirements {
+    background: green;
+    padding: 10px;
+    border: 2px solid #000;
+  }
+  .requirements {
 
-  -webkit-flex: 1;
-  height: 100%;
-  background: purple;
-  padding: 10px;
-  border: 2px solid #000;
-}
+    background: purple;
+    padding: 10px;
+    border: 2px solid #000;
+  }
+  footer {
 
-footer {
-  flex-direction: row;
-  -webkit-flex: 1;
-  background: firebrick;
-  padding: 10px;
-  border: 2px solid #000;
-  margin-left: auto;
-}
+    background: firebrick;
+    padding: 10px;
+    border: 2px solid #000;
+  }
 
 /* sidebar */
 .sidebar {
@@ -165,7 +187,7 @@ footer {
   }
 
   .main {
-    -webkit-flex-direction: row;
+    flex-direction: row;
   }
 
 }
