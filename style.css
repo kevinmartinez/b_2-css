@@ -1,6 +1,20 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300|Quattrocento:400,700);
 
+/* Our container */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*
+
+LOOK UP ON HOW TO REMOVE THE BOTTOM BORDER, NORMALIZE OVERWRITES IT...
+
+abbr {
+  border-bottom: 0;
+}*/
+
 * {
   box-sizing: border-box;
 }
@@ -10,9 +24,21 @@ html, body {
   height: 100%;
 }
 
+div ~ p {
+  color: red;
+}
+
+header ~ div {
+  color: yellow;
+}
+
+/* DRY Classes */
+
+
+
 /* css zen gardens body id */
 #css-zen-garden {
-  background-color: lightblue;
+  background-color: red;
   font-family: 'Quattrocento', serif;
 }
 
@@ -59,8 +85,23 @@ h3 {
   color: yellow;
 }
 
+.intro header {
+
+}
+
+
+p {
+  font-size: 1.3em;
+  max-width: 725px;
+  margin: 0 auto;
+}
+
+
+
+
+
 .summary {
-  background: #75cee1;
+
   margin-top: 10px;
   padding: 10px;
   border: 2px solid #000;
@@ -74,6 +115,26 @@ h3 {
   color: red;
   font-size: 2em;
 }
+
+.summary p:nth-child(2) {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.summary p:hover {
+  cursor: progress;
+}
+
+.summary a:nth-child(1)::after {
+  content: url(html-512.png)
+}
+
+.summary a:nth-child(2) {
+}
+.summary a:nth-child(2)::after {
+  content: url(css-512.png);
+}
+
 
 .preamble {
   background: #75cee1;
@@ -90,7 +151,14 @@ h3 {
   margin: 0 auto;
 }
 
+.preamble p:nth-child(2) {
+  margin-top: 50px;
+}
 
+.preamble p {
+  margin: 0 auto;
+  max-width: 700px;
+}
 
 
 
