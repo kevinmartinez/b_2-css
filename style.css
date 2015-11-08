@@ -1,158 +1,151 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300|Quattrocento:400,700);
 
-/* Our container */
-.page-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* SMACSS
+================================ */
 
 /*
-
-LOOK UP ON HOW TO REMOVE THE BOTTOM BORDER, NORMALIZE OVERWRITES IT...
-
-abbr {
-  border-bottom: 0;
-}*/
+- Base Rules
+  - Define all default styles and how they should look no matter where they are on the page.
+  - Applied directly to element selectors - not classes or IDs
+  - Can be used as a CSS reset
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+}
 
 * {
   box-sizing: border-box;
 }
 
-html, body {
-  font-size: 16px;
-  height: 100%;
-}
-
-div ~ p {
-  color: red;
-}
-
-header ~ div {
-  color: yellow;
-}
-
-/* DRY Classes */
-
-
-
-/* css zen gardens body id */
-#css-zen-garden {
-  background-color: red;
-  font-family: 'Quattrocento', serif;
+body {
+    font-family: Quattrocento, Georgia, "Times New Roman", serif;
+    background: url(road-background.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 
 h1,
 h2,
 h3 {
-  font-family: 'Oswald', sans-serif;
-  color: #2C3E50;
-}
-
-
-/* intro section */
-/* Background pattern from subtlepatterns.com */
-.intro {
-  background: url('wild_flowers.png');
-  padding: 25px;
-}
-
-.intro header {
-  background: url('zen-background.png') no-repeat center center fixed;
-  background-size: cover;
-  padding: 10px;
-  border: 2px solid green;
-}
-
-.intro h1 {
-  color: #1E824C;
+  font-family: Oswald, Helvetica, Arial, sans-serif;
+  color: #ccc;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  font-weight: 400;
   text-align: center;
-  margin-top: 240px;
+  text-shadow: 5px 5px 20px #000;
 }
 
-.intro h2 {
-  margin-top: 100px;
-  margin-left: 200px;
-  color: #1E824C;
+h3 {
+  margin-bottom: 60px;
 }
-
-.intro h1 {
-  transition: margin-left 2s, color 0.8s;
-}
-
-.intro h1:hover {
-  margin-left: 300px;
-  color: yellow;
-}
-
-.intro header {
-
-}
-
 
 p {
-  font-size: 1.3em;
+  color: #fff;
+}
+
+/*- Layout Rules
+  - Divide the page into the major components: header, main footer, sidebar, grid, etc..
+  - These components can contain one or more modules
+================================ */
+
+/*- Module Rules
+  - The reusable modular components - or minor the components
+  - Each module should exist as a standalone component
+  - Can be easily moved throughout the layout without breaking
+  - Avoid IDs and element selectors - only use class names
+  - Subclassing Module Rules
+    - If we need to change the look of a module to use in other parts of the site, sub-class it
+    - Avoid creating a new, conditional style based on location
+================================ */
+
+/*- State Rules
+  - Define how modules look when in a particular state
+  - Collapsed/expanded, success/error, :hover/:active
+  - They augment or override other styles
+  - Can apply to Layout or Module styles
+  - Can be used with pseudo-classes, medua queries, or JavaScript
+  ================================ */
+
+/*- Theme Rules
+  - Define the color scheme and typography
+  - Similar to state rules - describe how the layout or modules might look
+  - Separate themes into their own set of styles so that they're easies to modify
+  - Optional rules - we may not have a need for themes in our project
+  ================================ */
+
+/* Web Fonts
+================================ */
+/*@font-face {
+  font-family: "Abolition Regular";
+  src: url('abolition-regular-webfont.eot');
+  src: url('abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('abolition-regular-webfont.woff') format('woff'),
+       url('abolition-regular-webfont.ttf') format('truetype');
+}*/
+
+/* LOOK UP ON HOW TO REMOVE THE BOTTOM BORDER, NORMALIZE OVERWRITES IT...
+
+abbr {
+  border-bottom: 0;
+}*/
+
+/* css zen gardens body id
+================================ */
+
+
+/* intro section
+================================ */
+
+.intro header {
+  padding: 25px 0;
+  /*background-color: #c1c2c2;
+  background: linear-gradient(#1E824C, transparent 90%), linear-gradient(0deg, #fff, transparent), url(zen-background.png) no-repeat center;
+  background-size: 100%;
+  box-shadow: 0 20px 20px -12px #000;*/
+}
+
+.intro h1 {
+  color: #1E824C;
+  text-shadow: 2px 5px 0 #000;
+}
+
+p {
+  font-size: 1em;
   max-width: 725px;
   margin: 0 auto;
-}
+  line-height: 1.5;
+  /* Best to use a unitless value for line-height. Source: Guil Hernandez, Teamtreehouse */
 
+  /*
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.5;
+  font-family: Georgia;
 
+  The Shorthand
 
-
-
-.summary {
-
-  margin-top: 10px;
-  padding: 10px;
-  border: 2px solid #000;
-}
-
-.summary p {
-  font-size: 1.25em;
+  font: 700 1em/1.5 Georgia*/
 }
 
 .summary p::first-letter {
   color: red;
   font-size: 2em;
 }
-
-.summary p:nth-child(2) {
-  font-style: italic;
-  font-weight: bold;
-}
-
-.summary p:hover {
-  cursor: progress;
-}
-
 .summary a:nth-child(1)::after {
   content: url(html-512.png)
-}
-
-.summary a:nth-child(2) {
 }
 .summary a:nth-child(2)::after {
   content: url(css-512.png);
 }
 
-
 .preamble {
-  background: #75cee1;
-  margin-top: 10px;
-  padding: 10px;
-  border: 2px solid #000;
-}
-.preamble h3 {
-  box-shadow: 0 0 0 10px black;
-  width: 300px;
-  padding: 10px 10px 50px 10px;
-  transform: rotate(-8deg);
-  text-align: center;
-  margin: 0 auto;
-}
-
-.preamble p:nth-child(2) {
-  margin-top: 50px;
+  padding: 50px 25px;
+  /*background: radial-gradient(circle at top right, yellow 15%, #3498db 40%);*/
 }
 
 .preamble p {
@@ -163,99 +156,207 @@ p {
 
 
 
-/* main div FLEX CONTAINER */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main div FLEX CONTAINER
+================================ */
 .main {
-  background: #ecf0f1;
-  padding: 25px;
-  min-height: 100vh;
-
+  /*background: #ecf0f1;*/
 }
-  .explanation {
 
-    background: yellow;
-    padding: 10px;
-    border: 2px solid #000;
-  }
-    .explanation:hover {
+.explanation {
+  padding: 50px 25px;
+  /*background: #16a085;*/
+}
 
-      transition: 2s;
-    }
-  .participation {
+.participation {
+  padding: 50px 25px;
+  /*background: #2980b9;*/
+  transition: 3s;
+}
+.participation:hover {
+  /*background: #9b59b6;*/
+}
 
-    background: blue;
-    padding: 10px;
-    border: 2px solid #000;
-  }
-  .benefits {
+.benefits {
+  padding: 50px 25px;
+  /*background: #16a085;*/
+}
+.requirements {
+  padding: 50px 25px;
+  /*background: #2980b9;*/
+}
 
-    background: green;
-    padding: 10px;
-    border: 2px solid #000;
-  }
-  .requirements {
+footer {
+  background: firebrick;
+  height: 200px;
+  bottom: 0;
+}
 
-    background: purple;
-    padding: 10px;
-    border: 2px solid #000;
-  }
-  footer {
 
-    background: firebrick;
-    padding: 10px;
-    border: 2px solid #000;
-  }
 
-/* sidebar */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sidebar
+================================ */
 .sidebar {
-  background: #e67e22;
-  padding: 25px;
-}
-
-.wrapper {
-  max-width: 400px;
+  background: #f39c12;
 }
 
 .design-selection {
   background: lightblue;
-  padding: 10px;
-  border: 2px solid #000;
 }
 
 .design-archives {
   background: lightblue;
-  padding: 10px;
-  margin-top: 10px;
-  border: 2px solid #000;
 }
 
 .zen-resources {
   background: lightblue;
-  padding: 10px;
-  margin-top: 10px;
-  border: 2px solid #000;
 }
 
+/*.explanation,
+.participation,
+.benefits,
+.requirements,
+footer {
+  width: 20%;
+  float: left;
+}
+
+
+.main:after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
+
+
+
+
+
+
+
+
+/* ul li tricks */
+.sidebar ul {
+  list-style-type: none;
+  border: 1px solid black;
+  list-style-position: inside;
+  padding-left: 0;
+}
 
 
 @media screen and (min-width: 800px) {
   h1 {
-    font-size: 75px;
+    font-size: 6.25em;
   }
 
   h2 {
-    font-size: 60px;
+    font-size: 3.75em;
   }
 
   h3 {
-    font-size: 45px;
+    font-size: 2.8125em;
   }
-
-  h4 {
-    font-size: 30px;
+  p {
+    font-size: 1.3em;
   }
-
+  .page-wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   .main {
-    flex-direction: row;
+    max-width: 70%;
+    float: left;
   }
-
+  .sidebar {
+    max-width: 30%;
+    float: right;
+  }
+  .intro h1 {
+    color: #1E824C;
+    text-shadow: 2px 5px 0 #000;
+    transition: margin-left 2s, color 0.8s;
+  }
+  .intro h1:hover {
+    margin-left: 300px;
+    color: #C8F7C5;
+  }
+  .main {
+    max-width: 960px;
+  }
+  .main div:nth-of-type(1n+1), aside {
+    max-width: 960px;
+    margin: 0 auto;
+  }
 }
