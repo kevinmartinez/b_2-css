@@ -1,5 +1,6 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css);
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300|Quattrocento:400,700);
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700);
 
 
 /*
@@ -164,41 +165,101 @@ header:hover::before {
 
 /* Summary */
 .summary {
-  background: white;
-  width: 60%;
-  max-width: 600px;
+  background: #e67e22;
+  padding: 50px;
   border: 2px solid black;
+  font-size: 50px;
+  color: #fff;
 }
+
+
+
+
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.summary p {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Preamble */
 .preamble {
-  border: 2px solid yellow;
   margin-top: 15px;
-  padding: 25px;
+  padding: 50px;
+}
+
+.preamble h3 {
+  font-size: 5vw;
+}
+
+.preamble h3::before,
+.preamble h3::after,
+.preamble p::before,
+.preamble p::after {
+  font-family: 'Anonymous Pro';
+  font-weight: 700;
+  color: #f1c40f;
+}
+
+.preamble h3::before,
+.preamble h3::after {
+  font-size: 25px;
 }
 
 .preamble h3::before {
   content: '<h3>';
-  color: #000;
-  font-size: 25px;
 }
 
 .preamble h3::after {
-  content: '<h3>';
-  color: #000;
-  font-size: 25px;
+  content: '</h3>';
 }
 
 .preamble p {
-  border: 2px solid red;
+  font-size: 1.5rem;
   margin-top: 25px;
 }
 
 .preamble p::before,
 .preamble p::after {
-  content: '<p>';
   font-size: 25px;
-  font-weight: bold;
+}
+
+.preamble p::before {
+  content: '<p>';
 }
 
 .preamble p::after {
@@ -493,14 +554,103 @@ footer a {
 
 
 /* Sidebar */
+
+.sidebar::before {
+  content: url('hamburger.svg');
+  position: absolute;
+  left: 6px;
+}
+
+
 .sidebar {
+  height: 550px;
+  width: 300px;
   background: pink;
   color: white;
   border: 2px solid purple;
   outline: 5px solid teal;
   margin-top: 50px;
   padding: 25px;
+  padding-left: 50px;
   position: fixed;
-  bottom: 0;
-  display: none;
+  top: 0px;
+  right: -300px;
+  transition: all 2s ease;
+}
+
+.sidebar li {
+  list-style: none;
+}
+
+
+
+.sidebar:hover {
+  top: 0px;
+  right: 0px;
+  transition: all 2s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries
+============================== */
+
+
+@media (min-width:1300px) {
+
+  header {
+    background: #ecf0f1;
+    padding: 55px;
+    border: 30px solid #27ae60;
+    outline: 3px dotted #2c3e50;
+    outline-offset: 40px;
+  }
+
+  header h1 {
+    padding-top: 25px;
+    padding-left: 25px;
+  }
+
+  header h2 {
+    padding-left: 25px;
+    padding-bottom: 25px;
+  }
+
+  h1::before {
+    top: 5px;
+  }
+
+  .intro::before {
+    top: -35px;
+  }
+
 }
