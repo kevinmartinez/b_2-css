@@ -32,6 +32,7 @@ body {
   border: 15px solid #f39c12;
   padding: 50px;
   background: #3498db;
+  font-family: 'Oswald';
 }
 
 body::before {
@@ -47,6 +48,7 @@ h2,
 h3 {
   margin: 0;
   color: #8e44ad;
+  font-family: 'Oswald';
 }
 
 header {
@@ -111,7 +113,7 @@ header::before {
   position: relative;
 }
 
-header {
+/*header {
   transition: 2s;
 }
 
@@ -126,7 +128,7 @@ header:hover::before {
   font-size: 5vw;
   color: blue;
   z-index: 777;
-}
+}*/
 
 
 
@@ -166,13 +168,42 @@ header:hover::before {
   width: 60%;
   max-width: 600px;
   border: 2px solid black;
-  position: fixed;
-  bottom: 0;
-  z-index: 999;
-  display: none;
 }
 
+/* Preamble */
+.preamble {
+  border: 2px solid yellow;
+  margin-top: 15px;
+  padding: 25px;
+}
 
+.preamble h3::before {
+  content: '<h3>';
+  color: #000;
+  font-size: 25px;
+}
+
+.preamble h3::after {
+  content: '<h3>';
+  color: #000;
+  font-size: 25px;
+}
+
+.preamble p {
+  border: 2px solid red;
+  margin-top: 25px;
+}
+
+.preamble p::before,
+.preamble p::after {
+  content: '<p>';
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.preamble p::after {
+  content: '</p>';
+}
 
 
 
@@ -180,7 +211,112 @@ header:hover::before {
 /* Main / Supporting */
 .main {
   margin-top: 50px;
+  background: #95a5a6;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Explanation */
+.explanation {
+  background: lightblue;
+  padding: 50px;
+}
+
+.explanation h3 {
+  font-size: 7vw;
+}
+
+.explanation p {
+  font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Participation */
+.participation {
+  padding: 50px;
+  background: firebrick;
+  color: #fff;
+}
+
+.participation h3 {
+  font-size: 7vw;
+}
+
+.participation p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.participation abbr {
+  color: green;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.participation a {
+  color: pink;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+/*abbr:hover::after {
+  content: attr(title);
+}
+
+a {
+  position: relative;
+}
+
+a:hover::after {
+  content: attr(title);
+  display: block;
+  background: white;
+  position: absolute;
+  width: 200px;
+}*/
+
+
+
+
+
+
+
+
 
 
 /* Benefits */
@@ -189,7 +325,6 @@ header:hover::before {
   padding: 50px;
   min-height: 250px;
   position: relative;
-  margin-top: 550px;
   margin-bottom: 150px;
 }
 
@@ -258,23 +393,82 @@ header:hover::before {
 
 
 
-
-
-
-
-
-/* Participation */
-.participation {
-  width: 400px;
-  height: 400px;
-  background: red;
+/* Requirements */
+.requirements {
+  padding: 50px;
+  background: #2ecc71;
 }
 
-.participation h3 p:first-child {
-  background: yellow;
-  width: 300px;
-  height: 300px;
+.requirements h3 {
+  font-size: 7vw;
 }
+
+.requirements p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+
+
+footer {
+  background: #f1c40f;
+  padding: 50px;
+  text-align: center;
+}
+
+footer a {
+  font-size: 5vw;
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
