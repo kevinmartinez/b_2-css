@@ -17,6 +17,14 @@ Green (NEPHRITIS) #27ae60
   padding: 0;
 }
 
+a {
+  color: #663399; /* Rebbecca Purple */
+}
+
+a:hover {
+  color: #674172;
+}
+
 html {
   border: 15px solid #34495e;
   padding: 25px;
@@ -32,7 +40,19 @@ html::before {
 body {
   border: 15px solid #f39c12;
   padding: 50px;
-  background: #3498db;
+  background-color: #000;
+
+  background-image:
+    radial-gradient(2px 2px at 15px 25px, #bfbfbf, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 35px 65px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 50px 160px, #6C7A89, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 150px 130px, #6C7A89, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 180px 180px;
+
+
   font-family: 'Oswald';
 }
 
@@ -165,15 +185,16 @@ header:hover::before {
 
 /* Summary */
 .summary {
-  background: #e67e22;
-  padding: 50px;
-  border: 2px solid black;
-  font-size: 50px;
-  color: #fff;
+  padding: 25px 0 100px;
+  font-size: 4vw;
 }
 
-
-
+.summary p {
+  color: #ffd700;
+  transform-origin: 50% 100%;
+	transform: perspective(300px) rotateX(25deg);
+  text-align: center;
+}
 
 
 /* make keyframes that tell the start state and the end state of our object */
@@ -218,12 +239,24 @@ header:hover::before {
 
 /* Preamble */
 .preamble {
+  background: url(road-to-enlightenment.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   margin-top: 15px;
   padding: 50px;
+  text-align: center;
+  color: #000;
+  border-radius: 50%;
+  height: 800px;
+  width: 800px;
+  margin: 0 auto;
 }
 
 .preamble h3 {
   font-size: 5vw;
+  color: #4B77BE;
 }
 
 .preamble h3::before,
@@ -232,7 +265,7 @@ header:hover::before {
 .preamble p::after {
   font-family: 'Anonymous Pro';
   font-weight: 700;
-  color: #f1c40f;
+  color: #EF4836;
 }
 
 .preamble h3::before,
@@ -272,7 +305,6 @@ header:hover::before {
 /* Main / Supporting */
 .main {
   margin-top: 50px;
-  background: #95a5a6;
 }
 
 
@@ -298,16 +330,19 @@ header:hover::before {
 
 /* Explanation */
 .explanation {
-  background: lightblue;
   padding: 50px;
+
 }
 
 .explanation h3 {
+  text-shadow: -1px -1px 1px #FFFFFF, 1px 1px 1px #000000;
   font-size: 7vw;
+  opacity: 0.5;
 }
 
 .explanation p {
   font-size: 1.5rem;
+  color: #89C4F4;
 }
 
 
@@ -328,12 +363,17 @@ header:hover::before {
 /* Participation */
 .participation {
   padding: 50px;
-  background: firebrick;
   color: #fff;
 }
 
 .participation h3 {
   font-size: 7vw;
+  color: #D0F8FF;
+  text-shadow:
+    0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+    0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+    0 0 40px #A5F1FF;
+  text-align: center;
 }
 
 .participation p {
@@ -406,7 +446,7 @@ a:hover::after {
   margin-right: -4px;
   min-height: 250px;
   font-size: 2vw;
-  color: #000;
+  color: #86E2D5;
 }
 
 .benefits h3:before {
@@ -422,6 +462,7 @@ a:hover::after {
   border: 10px solid #8e44ad;
   margin-left: -4px;
   min-height: 250px;
+  color: #86E2D5;
 }
 
 .benefits p:before {
@@ -565,7 +606,7 @@ footer a {
 .sidebar {
   height: 550px;
   width: 300px;
-  background: pink;
+  background-color: rgba(145, 61, 136, 0.6);;
   color: white;
   border: 2px solid purple;
   outline: 5px solid teal;
@@ -580,6 +621,10 @@ footer a {
 
 .sidebar li {
   list-style: none;
+}
+
+.sidebar a {
+  color: #fff;
 }
 
 
