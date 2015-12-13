@@ -2,7 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300|Quattrocento:400,700);
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700);
 
-
 /*
 FLAT COLORS
 Lightblue (PETER RIVER) #3498db rgba(52, 152, 219,1.0)
@@ -29,6 +28,7 @@ html {
   border: 15px solid #34495e;
   padding: 25px;
 }
+
 html::before {
   content: "HTML";
   position: absolute;
@@ -41,7 +41,6 @@ body {
   border: 15px solid #f39c12;
   padding: 50px;
   background-color: #000;
-
   background-image:
     radial-gradient(2px 2px at 15px 25px, #bfbfbf, rgba(0,0,0,0)),
     radial-gradient(2px 2px at 35px 65px, #fff, rgba(0,0,0,0)),
@@ -134,54 +133,6 @@ header::before {
   position: relative;
 }
 
-/*header {
-  transition: 2s;
-}
-
-header:hover {
-  transition: 5s;
-  margin-left: 50px;
-}
-
-header:hover::before {
-  content: "This is a 3sec CSS Transition";
-  transition: 3s;
-  font-size: 5vw;
-  color: blue;
-  z-index: 777;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Summary */
 .summary {
@@ -197,7 +148,7 @@ header:hover::before {
 }
 
 
-/* make keyframes that tell the start state and the end state of our object */
+/* make keyframes that tell the start state and the end state of our object, @ is not implemented and does not validate but does work */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -207,34 +158,13 @@ header:hover::before {
   -webkit-animation:fadeIn ease-in 1;
   -moz-animation:fadeIn ease-in 1;
   animation:fadeIn ease-in 1;
-
   -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
   -moz-animation-fill-mode:forwards;
   animation-fill-mode:forwards;
-
   -webkit-animation-duration: 3s;
   -moz-animation-duration: 3s;
   animation-duration: 3s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Preamble */
@@ -300,38 +230,15 @@ header:hover::before {
 }
 
 
-
-
 /* Main / Supporting */
 .main {
   margin-top: 50px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Explanation */
 .explanation {
   padding: 50px;
-
 }
 
 .explanation h3 {
@@ -344,20 +251,6 @@ header:hover::before {
   font-size: 1.5rem;
   color: #89C4F4;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Participation */
@@ -394,30 +287,6 @@ header:hover::before {
   font-size: 1.6rem;
   text-decoration: none;
 }
-
-/*abbr:hover::after {
-  content: attr(title);
-}
-
-a {
-  position: relative;
-}
-
-a:hover::after {
-  content: attr(title);
-  display: block;
-  background: white;
-  position: absolute;
-  width: 200px;
-}*/
-
-
-
-
-
-
-
-
 
 
 /* Benefits */
@@ -481,20 +350,6 @@ a:hover::after {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Requirements */
 .requirements {
   padding: 50px;
@@ -505,14 +360,14 @@ a:hover::after {
   text-align: center;
   z-index: 100;
   text-transform: uppercase;
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
- background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
- color:transparent;
- -webkit-background-clip: text;
- background-clip: text;
-}
-
-
+  background-image:
+    -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+   background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+   color:transparent;
+   /* text does not validate but does work! */
+   -webkit-background-clip: text;
+   background-clip: text;
+ }
 
 .requirements h3::before {
   content: " ";
@@ -587,74 +442,6 @@ footer a {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Sidebar */
 
 .sidebar::before {
@@ -662,7 +449,6 @@ footer a {
   position: absolute;
   left: 6px;
 }
-
 
 .sidebar {
   height: 550px;
@@ -688,8 +474,6 @@ footer a {
   color: #fff;
 }
 
-
-
 .sidebar:hover {
   top: 0px;
   right: 0px;
@@ -697,42 +481,10 @@ footer a {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Media queries
 ============================== */
 
-
 @media (min-width:1300px) {
-
   header {
     background: #ecf0f1;
     padding: 55px;
@@ -758,5 +510,4 @@ footer a {
   .intro::before {
     top: -35px;
   }
-
 }
