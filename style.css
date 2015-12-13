@@ -563,17 +563,20 @@ footer {
   text-align: center;
   position: relative;
   z-index: 10;
+  text-align: center;
 }
 
 footer::before {
-  content: " ";
-  padding: 200px;
+  content: "";
   background-image: url(spaceship.svg);
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-right: -90px;
 }
 
 footer a {
